@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -std=gnu99 -lpthread -fopenmp -fstrict-overflow -Werror -Wall -Wshadow -pedantic -I$(CURDIR)$/;"	m
+DEPS	Makefile	/^DEPS := $(OBJ_SEQ:.o=.d)$/;"	m
+DS_H	ds.h	2;"	d
+FT_H	familytree.h	2;"	d
+FT_REF_H	familytree_ref.h	2;"	d
+IQ	ds.h	/^	int IQ;$/;"	m	struct:bin_tree
+LDFLAGS	Makefile	/^LDFLAGS = -lm -lpthread -fopenmp -lrt -ldl$/;"	m
+MAXLEVEL	ds.h	8;"	d
+NAME	Makefile	/^NAME = familytree$/;"	m
+NUMNODES	ds.h	9;"	d
+OBJ_PAR	Makefile	/^OBJ_PAR = $(SDIR)\/main.o $(SDIR)\/ds.o $(SDIR)\/vis.o $(SDIR)\/$(NAME).o $(SDIR)\/$(NAME)_par.o$/;"	m
+OBJ_SEQ	Makefile	/^OBJ_SEQ = $(SDIR)\/main.o $(SDIR)\/ds.o $(SDIR)\/vis.o $(SDIR)\/$(NAME).o $(SDIR)\/$(NAME)_seq.o$/;"	m
+OBJ_UNIT	Makefile	/^OBJ_UNIT = $(SDIR)\/unit_test.o $(SDIR)\/ds.o $(SDIR)\/vis.o $(SDIR)\/$(NAME).o $(SDIR)\/$(NAME)_par.o $(SDIR)\/$(NAME)_ref.o$/;"	m
+SDIR	Makefile	/^SDIR = student$/;"	m
+SRC	Makefile	/^SRC = $(wildcard *.c) $(wildcard *\/*.c)$/;"	m
+VIS_H	vis.h	2;"	d
+VPATH	Makefile	/^VPATH = $(SDIR)$/;"	m
+bin_tree	ds.h	/^struct bin_tree {$/;"	s
+compute_IQ	familytree.c	/^int compute_IQ(int data){$/;"	f
+data	ds.h	/^	int data;$/;"	m	struct:bin_tree
+fill	familytree.c	/^void fill(tree *node, int level){$/;"	f
+g_node_id	ds.c	/^int g_node_id = 0;$/;"	v
+genius	ds.h	/^int genius[NUMNODES];$/;"	v
+id	ds.h	/^	int id;$/;"	m	struct:bin_tree
+initialize	familytree.c	/^void initialize(tree *node) {$/;"	f
+is_prime	familytree.c	/^int is_prime(int n){$/;"	f
+left	ds.h	/^	struct bin_tree * right, * left;$/;"	m	struct:bin_tree	typeref:struct:bin_tree::
+main	main.c	/^int main(int argc, char** argv){$/;"	f
+main	unit_test.c	/^int main(){$/;"	f
+mode	Makefile	/^	mode = release$/;"	m
+name	ds.h	/^  	char name[20];$/;"	m	struct:bin_tree
+names	ds.c	/^char *names[31] = {$/;"	v
+right	ds.h	/^	struct bin_tree * right, * left;$/;"	m	struct:bin_tree	typeref:struct:bin_tree::bin_tree
+tearDown	familytree.c	/^void tearDown(tree* node) {$/;"	f
+traverse	familytree_seq.c	/^void traverse(tree *node, int numThreads){$/;"	f
+traverse	student/familytree_par.c	/^void traverse(tree *node, int numThreads){$/;"	f
+traverse_ref	familytree_ref.c	/^void traverse_ref(tree *node){$/;"	f
+tree	ds.h	/^typedef struct bin_tree tree;$/;"	t	typeref:struct:bin_tree
+visualize	vis.c	/^void visualize(){$/;"	f

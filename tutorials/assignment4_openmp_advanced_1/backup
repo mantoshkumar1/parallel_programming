@@ -1,0 +1,37 @@
+#include "familytree.h"
+#include <omp.h>
+
+
+void traverse(tree *node, int numThreads){
+	
+	if(node != NULL){
+		omp_set_num_threads(numThreads);
+
+		#pragma omp parallel shared(node)
+		{
+	 	 
+		    #pragma omp single 
+		    {
+
+		       #pragma omp task shared(node)
+		       {
+   		          node->IQ = compute_IQ(node->data);
+		          genius[node->id] = node->IQ;
+		       }
+		       #pragma omp task shared(node)
+		       {
+		          traverse(node->right, numThreads);
+		       }
+		
+		       #pragma omp task shared(node)
+		       {
+		           traverse(node->left, numThreads);
+		       }
+
+
+		   }
+		}
+	}
+
+}
+
