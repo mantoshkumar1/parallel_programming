@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = mpicc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -std=gnu99 -fstrict-overflow -Werror -Wall -Wshadow -pedantic$/;"	m
+DEPS	Makefile	/^DEPS := $(OBJ_SEQ:.o=.d)$/;"	m
+HELPER_H_	helper.h	2;"	d
+LDFLAGS	Makefile	/^LDFLAGS = -lm -lrt -I $(CURDIR)$/;"	m
+NAME	Makefile	/^NAME = reverse$/;"	m
+OBJ_PAR	Makefile	/^OBJ_PAR = $(SDIR)\/main.o $(SDIR)\/$(NAME)_par.o $(SDIR)\/helper.o$/;"	m
+OBJ_SEQ	Makefile	/^OBJ_SEQ = $(SDIR)\/main.o $(SDIR)\/$(NAME)_seq.o $(SDIR)\/helper.o$/;"	m
+OBJ_UNIT	Makefile	/^OBJ_UNIT = $(SDIR)\/unit_test.o $(SDIR)\/$(NAME)_par.o $(SDIR)\/helper.o$/;"	m
+REVERSE_H_	reverse.h	2;"	d
+SDIR	Makefile	/^SDIR = student$/;"	m
+SRC	Makefile	/^SRC = $(wildcard *.c) $(wildcard *\/*.c)$/;"	m
+VPATH	Makefile	/^VPATH = $(SDIR)$/;"	m
+isEqual	unit_test.c	/^int isEqual(char* a_seq, char* a_par, int length) {$/;"	f
+main	main.c	/^int main(int argc, char** argv)$/;"	f
+main	unit_test.c	/^int main(int argc, char** argv) {$/;"	f
+mode	Makefile	/^	mode = release$/;"	m
+print	helper.c	/^void print(const char c[], int n) {$/;"	f
+reverse	reverse_seq.c	/^void reverse(char *str, int strlen)$/;"	f
+reverse	student/reverse_par.c	/^void reverse(char *str, int strlen)$/;"	f
+reverse_str	helper.c	/^void reverse_str(char *str, int strlen)$/;"	f
+time_diff	helper.c	/^double time_diff(const struct timespec *first, const struct timespec *second, struct timespec *diff)$/;"	f
